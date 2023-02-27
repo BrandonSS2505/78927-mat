@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\brand\\OneDrive\\Escritorio\\78927-mat\\practica02\\practica02.csproj": {}
+    "C:\\Users\\brand\\OneDrive\\Escritorio\\78927-mat\\Practica02\\practica02.csproj": {}
   },
   "projects": {
-    "C:\\Users\\brand\\OneDrive\\Escritorio\\78927-mat\\practica02\\practica02.csproj": {
+    "C:\\Users\\brand\\OneDrive\\Escritorio\\78927-mat\\Practica02\\practica02.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\brand\\OneDrive\\Escritorio\\78927-mat\\practica02\\practica02.csproj",
+        "projectUniqueName": "C:\\Users\\brand\\OneDrive\\Escritorio\\78927-mat\\Practica02\\practica02.csproj",
         "projectName": "practica02",
-        "projectPath": "C:\\Users\\brand\\OneDrive\\Escritorio\\78927-mat\\practica02\\practica02.csproj",
+        "projectPath": "C:\\Users\\brand\\OneDrive\\Escritorio\\78927-mat\\Practica02\\practica02.csproj",
         "packagesPath": "C:\\Users\\brand\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\brand\\OneDrive\\Escritorio\\78927-mat\\practica02\\obj\\",
+        "outputPath": "C:\\Users\\brand\\OneDrive\\Escritorio\\78927-mat\\Practica02\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\brand\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,6 +37,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "SoapCore": {
+              "target": "Package",
+              "version": "[1.1.0.36, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
