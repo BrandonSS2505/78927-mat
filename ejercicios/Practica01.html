@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="re"></p>
+    <p id="rr"></p>
+    <p id="tt"></p>
+    <p id="id"></p>
+    
+    <script>
+    var text, parser, xmlDoc;
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function(){
+        if (this.readyState == 4 && this.status == 200){
+            myFunction(this);
+        }
+    };
+    
+    parser = new DOMParser();
+    xmlDoc = parser.parseFromString(text,"text/xml");
+    
+    document.getElementById("rr").innerHTML =
+    xmlDoc.getElementsByTagName("cfdi:Comprobante")[0].childNodes[0].nodeValue;
+    document.getElementById("re").innerHTML =
+    xmlDoc.getElementsByTagName("cfdi:Emisor")[0].childNodes[0].nodeValue;
+    document.getElementById("tt").innerHTML =
+    xmlDoc.getElementsByTagName("cfdi:Receptor")[0].childNodes[0].nodeValue;
+    document.getElementById("id").innerHTML =
+    xmlDoc.getElementsByTagName("tfd:TimbreFiscalDigital")[0].childNodes[0].nodeValue;
+    </script>
+    
+    </body>
+</html>
