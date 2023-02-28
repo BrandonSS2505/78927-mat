@@ -17,19 +17,19 @@ namespace WSDL.operaciones{
             }
 
             if (estaLleno == true){
-                return "Memoria llena..";
+                return "sin cupo";
             }
             return "Hola "+nombre;
         }
         public string Mostrar(int id){
             if(id >= mensajes.Length || id < 0){
-                return "No existe este id";
+                return "No existe";
             } 
             
             if(!string.IsNullOrEmpty(mensajes[id])){
-                return "Hola y bienvenido " + mensajes[id];
+                return "Hola " + mensajes[id];
             }
-            return "No se encontro el mensaje con el id";
+            return "No se encontro";
         }
     }
 }
