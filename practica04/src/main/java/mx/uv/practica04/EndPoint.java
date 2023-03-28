@@ -14,7 +14,7 @@ public class EndPoint{
     @Autowired
     private ISaludador iSaludador;
     
-    @PayloadRoot(localPart = "saludarRequest", namespace = "https://t4is.uv.mx/saludos")
+    @PayloadRoot(localPart = "SaludarRequest", namespace = "https://t4is.uv.mx/saludos")
 
     @ResponsePayload
     public SaludarResponse Saludar(@RequestPayload SaludarRequest peticion){
@@ -26,6 +26,7 @@ public class EndPoint{
         Saludador saludador = new Saludador();
         saludador.setNombre(peticion.getNombre());
         iSaludador.save(saludador);
+        
 
         return response; 
     }
