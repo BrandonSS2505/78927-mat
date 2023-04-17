@@ -1,0 +1,12 @@
+from ubuntu 
+run apt update
+run apt install -y openjdk-8-jdk
+run apt install -y mysql-server
+workdir /app
+add Script4.sql /app/Script4.sql
+add cambios.jar /app/cambios.jar
+add script.sh /app/script.sh
+run chmod 755 /app/script.sh
+run /etc/init.d/mysql start; mysql < /app/Script4.sql
+cmd ["/app/script.sh"]
+expose 8080

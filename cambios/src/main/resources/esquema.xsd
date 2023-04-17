@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+ targetNamespace="https://t4is.uv.mx/escuela"
+ xmlns:tns="https://t4is.uv.mx/escuela"
+ elementFormDefault="qualified">
+
+ <xs:element name="EditarRequest">
+  <xs:complexType>
+   <xs:sequence>
+  	<xs:element name="indexeditar" type="xs:int"/>
+    <xs:element name="alumnoeditar" type="xs:string"/>
+    <xs:element name="maestroeditar" type="xs:string"/>
+    <xs:element name="aulaeditar" type="xs:string"/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name="EditarResponse">
+  <xs:complexType>
+   <xs:sequence>
+  	<xs:element name="aviso" type="xs:string"/>
+    <xs:element name="alumnoeditado" type="xs:string"/>
+    <xs:element name ="alumnonuevo" type="xs:string"/>
+    <xs:element name="maestroeditado" type="xs:string"/>
+    <xs:element name ="maestronuevo" type="xs:string"/>
+    <xs:element name="aulaeditado" type="xs:string"/>
+    <xs:element name ="aulanuevo" type="xs:string"/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+</xs:schema>
